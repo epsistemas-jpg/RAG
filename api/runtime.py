@@ -8,7 +8,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from api.main import create_app
+from api.main import _claves_configuradas, create_app
 from rag.consulta_persistente import ServicioConsultaPersistente
 from rag.ocr import TesseractProvider
 from services.indexing_service import IndexingService
@@ -19,8 +19,8 @@ from storage.vector_store import PersistentVectorStore
 
 def build_app():
     load_dotenv()
-    if not os.getenv("RAG_API_KEY"):
-        raise RuntimeError("RAG_API_KEY es obligatorio para api.runtime")
+    if not os.getenv("RAG_API_KEY") and not _claves_configuradas():
+        raise RuntimeError("Configura RAG_API_KEY o RAG_API_KEYS como clave:rol")
     data = Path(os.getenv("RAG_DATA_DIR", "data"))
     corpus = Path(os.getenv("RAG_CORPUS", "corpus"))
     embedding_version = os.getenv("RAG_EMBEDDING_VERSION", "gemini-embedding-001:768")
