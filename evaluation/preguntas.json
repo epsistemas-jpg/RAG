@@ -1,0 +1,10 @@
+[
+  {"pregunta": "¿Cuál es la calificación mínima aprobatoria de NBL-204?", "relevantes": {"temario_nbl204.md": 3.0}},
+  {"pregunta": "¿Qué incluye la cuota de inscripción?", "relevantes": {"costos_y_pagos.md": 3.0, "faq_mezclado.txt": 2.0}},
+  {"pregunta": "¿Se necesita una tarjeta gráfica dedicada?", "relevantes": {"requisitos_hardware.md": 3.0, "faq_mezclado.txt": 2.0}},
+  {"pregunta": "¿Quién imparte NBL-204?", "relevantes": {"instructores.md": 3.0, "soporte_export.txt": 2.0}},
+  {"pregunta": "¿Cuándo inicia la cohorte 2026-B?", "relevantes": {"temario_nbl204.md": 3.0, "faq_mezclado.txt": 2.0}},
+  {"pregunta": "¿Cómo solicito un reembolso de la cuota de inscripción?", "relevantes": {"politica_reembolsos.md": 3.0, "faq_mezclado.txt": 2.0}},
+  {"pregunta": "¿Qué formas de pago se aceptan?", "relevantes": {"costos_y_pagos.md": 3.0, "faq_mezclado.txt": 2.0}},
+  {"pregunta": "¿Qué prerrequisito tiene NBL-204?", "relevantes": {"temario_nbl204.md": 3.0, "changelog_temario.txt": 2.0}}
+]

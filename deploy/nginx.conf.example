@@ -1,0 +1,17 @@
+server {
+    listen 443 ssl;
+    server_name rag.example.internal;
+
+    ssl_certificate     /etc/ssl/certs/rag.crt;
+    ssl_certificate_key /etc/ssl/private/rag.key;
+
+    client_max_body_size 1m;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto https;
+        proxy_set_header X-Request-ID $request_id;
+        proxy_read_timeout 60s;
+    }
+}

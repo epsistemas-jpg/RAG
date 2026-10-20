@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: motor-rag-legal
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python scripts/start_render.py
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: RAG_API_KEY
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: RAG_CORPUS
+        value: corpus
+      - key: RAG_DATA_DIR
+        value: data
+      - key: RAG_INDEX_MODE
+        value: inline
+      - key: RAG_HYBRID_SEARCH
+        value: "true"
+      - key: RAG_EMBEDDING_BATCH_SIZE
+        value: "32"
